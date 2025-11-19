@@ -1,0 +1,7 @@
+{
+    "bandas": [
+      { "id": 1, "artista": "Metallica", "musica": "Nothing Else Matters" },
+      { "id": 2, "artista": "Coldplay", "musica": "Yellow" }
+    ]
+  }
+  
