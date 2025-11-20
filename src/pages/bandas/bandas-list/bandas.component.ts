@@ -1,17 +1,18 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from "@angular/core";
-import { Banda } from "../../../models/bandas.model";
 import { BandasService } from "../bandas.service";
+import { Banda } from '../../../models/bandas.model';
+import { ɵEmptyOutletComponent } from "@angular/router";
 
 
 @Component({
   selector: 'app-bandas',
   standalone: true,
-  imports: [CommonModule],
-  templateUrl: 'bandas.html',
-  styleUrl: 'bandas.scss'
+  imports: [CommonModule, ɵEmptyOutletComponent],
+  templateUrl: 'bandas.component.html',
+  styleUrl: 'bandas.component.scss'
 })
-export class Bandas implements OnInit {
+export class BandasComponent implements OnInit {
 bandas: Banda[] = []
 
   constructor(private bandasService : BandasService) {}
@@ -26,6 +27,10 @@ bandas: Banda[] = []
       this.bandas = data;
       console.log(data);
     });
+  }
+  
+  salvar(){
+
   }
 
 }

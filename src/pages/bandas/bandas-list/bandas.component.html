@@ -1,0 +1,17 @@
+<label>Nome da Banda</label>
+<input type="text">
+
+<label>Nome da Banda</label>
+<input type="text">
+
+
+
+<h2>Lista de Bandas</h2>
+<ul>
+    @for (banda of bandas; track banda.id) {
+    <li>{{ banda.artista }} -{{ banda.musica }}</li>
+    } @empty {
+    <li>Bandas não encontradas</li>
+    }
+</ul>
+<button (click)="salvar()">Voltar</button>
